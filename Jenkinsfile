@@ -60,7 +60,6 @@ pipeline {
             }
             steps {
                 script {
-                    echo $KUBE_MASTER_IP
                     sleep (time: 5)
                     def response = httpRequest (
                         url: "http://$KUBE_MASTER_IP:8081/",
